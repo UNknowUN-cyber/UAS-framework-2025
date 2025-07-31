@@ -1,0 +1,42 @@
+# Daftar Perintah Instalasi dan Pengembangan
+
+Dokumen ini mencatat semua perintah yang digunakan selama proses pembuatan dan pengembangan aplikasi Sistem Manajemen Ujian Online.
+
+## 1. Inisialisasi Proyek (Awal)
+
+Perintah ini digunakan untuk membuat proyek Laravel baru. (Catatan: Proyek ini sudah dibuat sebelumnya, perintah ini dicatat untuk dokumentasi).
+
+```bash
+composer create-project laravel/laravel sistem-ujian-online
+```
+
+## 2. Konfigurasi Awal
+
+Perintah-perintah berikut dijalankan setelah proyek berhasil dibuat.
+
+```bash
+# Masuk ke direktori proyek
+cd sistem-ujian-online
+
+# Salin file environment
+copy .env.example .env
+
+# Generate application key
+php artisan key:generate
+```
+
+## 3. Migrasi Database
+
+Pastikan Anda sudah membuat database dan mengkonfigurasi file `.env` sebelum menjalankan perintah ini.
+
+```bash
+# Menjalankan migrasi untuk membuat tabel-tabel dasar
+php artisan migrate
+```
+
+## 4. Menjalankan Server Pengembangan
+
+```bash
+# Menjalankan server lokal Laravel
+php artisan serve
+```

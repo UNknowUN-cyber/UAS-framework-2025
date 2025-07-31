@@ -1,0 +1,213 @@
+// Fonts
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+// Variables
+@import 'variables';
+
+// Bootstrap
+@import 'bootstrap/scss/bootstrap';
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f0f2f5; // Light gray background
+}
+
+.card {
+    border-radius: 0.75rem; // Rounded corners for cards
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); // Soft shadow
+    border: none; // Remove default border
+}
+
+.btn {
+    border-radius: 0.5rem; // Slightly rounded buttons
+    transition: all 0.3s ease; // Smooth transitions for hover effects
+}
+
+.btn-primary {
+    background-color: #007bff; // Primary color
+    border-color: #007bff;
+
+    &:hover {
+        background-color: #0056b3; // Darker on hover
+        border-color: #0056b3;
+    }
+}
+
+.navbar {
+    background-color: #ffffff; // White navbar
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05); // Subtle shadow
+}
+
+.navbar-brand {
+    font-weight: 600;
+    color: #343a40; // Dark text for light mode navbar
+    font-family: sans-serif; // Revert to system default font
+}
+
+.nav-link {
+    color: #495057; // Dark text for light mode nav links
+    transition: color 0.3s ease; // Smooth transition for nav links
+    font-family: sans-serif; // Revert to system default font
+
+    &:hover {
+        color: #007bff; // Primary color on hover
+    }
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+main {
+    animation: fadeIn 0.8s ease-out forwards;
+}
+
+/* Dark Mode Styles */
+body.dark-mode {
+    background-color: #121212; // Even darker background
+    color: #f8f9fa; // Very light white for better contrast
+
+    .navbar {
+        background-color: #000000 !important; // Pure black navbar, with !important
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+    }
+
+    .navbar-brand,
+    .nav-link {
+        color: #ffffff !important; // Pure white for maximum clarity in dark mode, with !important for testing
+        font-family: sans-serif; // Revert to system default font
+
+        &:hover {
+            color: #bb86fc !important; // A vibrant purple for hover, with !important for testing
+        }
+    }
+
+    .card {
+        background-color: #1e1e1e; // Darker card background
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+        color: #f8f9fa; // Ensure card text is visible
+    }
+
+    .card-header {
+        background-color: #2c2c2c; // Even darker header
+        color: #f8f9fa;
+    }
+
+    .form-control {
+        background-color: #2c2c2c;
+        color: #f8f9fa;
+        border-color: #424242;
+
+        &:focus {
+            background-color: #2c2c2c;
+            color: #f8f9fa;
+            border-color: #bb86fc;
+            box-shadow: 0 0 0 0.25rem rgba(187, 134, 252, 0.25);
+        }
+    }
+
+    .table {
+        color: #f8f9fa;
+
+        th {
+            border-color: #424242;
+        }
+
+        td {
+            border-color: #424242;
+        }
+    }
+
+    .list-group-item {
+        background-color: #1e1e1e;
+        color: #f8f9fa;
+        border-color: #424242;
+    }
+
+    .btn-primary {
+        background-color: #bb86fc;
+        border-color: #bb86fc;
+        color: #121212;
+
+        &:hover {
+            background-color: #9a67ea;
+            border-color: #9a67ea;
+        }
+    }
+
+    .btn-secondary {
+        background-color: #424242;
+        border-color: #424242;
+        color: #f8f9fa;
+
+        &:hover {
+            background-color: #5a5a5a;
+            border-color: #5a5a5a;
+        }
+    }
+
+    .btn-info {
+        background-color: #03dac6;
+        border-color: #03dac6;
+        color: #121212;
+
+        &:hover {
+            background-color: #01a299;
+            border-color: #01a299;
+        }
+    }
+
+    .btn-warning {
+        background-color: #ffc107;
+        border-color: #ffc107;
+        color: #121212;
+
+        &:hover {
+            background-color: #e0a800;
+            border-color: #e0a800;
+        }
+    }
+
+    .btn-danger {
+        background-color: #cf6679;
+        border-color: #cf6679;
+        color: #121212;
+
+        &:hover {
+            background-color: #b00020;
+            border-color: #b00020;
+        }
+    }
+
+    .badge {
+        color: #121212;
+    }
+
+    .badge.bg-info {
+        background-color: #03dac6 !important;
+    }
+
+    .badge.bg-secondary {
+        background-color: #5a5a5a !important;
+    }
+
+    .badge.bg-success {
+        background-color: #03dac6 !important;
+    }
+
+    .badge.bg-danger {
+        background-color: #cf6679 !important;
+    }
+
+    .badge.bg-warning {
+        background-color: #ffc107 !important;
+    }
+}
